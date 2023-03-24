@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url = env("MYSQL_HOST")
+}
+
+model cart{
+  wallet_address String   @unique
+  product_1234    Int
+  product_1235    Int
+  product_1236    Int
+  product_1237    Int
+}
+
+model orders{
+  id        Int      @id @default(autoincrement())
+  wallet_address String   
+  product_1234    Int
+  product_1235    Int
+  product_1236    Int
+  product_1237    Int
+
+
+}
